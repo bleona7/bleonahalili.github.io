@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    min-height: 100vh;
+    opacity: 100%;
+}
+
+header
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8px;
+    z-index: 10000;
+}
+header .logo1
+{
+color: #fff;
+font-weight: 700;
+text-decoration: none;
+text-transform: uppercase;
+margin-left: 20px;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+header ul li 
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover ,
+header ul li a.active
+{
+background:#fff ;
+color: #000000;
+}
+
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#fff;
+    
+}
+.text 
+{
+    margin-top: 20px;
+    font-size: 500px;
+    
+}
+.content .text a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #7e91dc;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+section
+{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sec-1
+{
+    background-image:url(assets/download.jpg);
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size: cover;
+}
+
+#sec-2
+{
+    background-color: #000000;
+    text-align: center;
+
+}
+
+
+.container h1
+{
+    color: rgb(255, 255, 255);
+    
+}
+
+.container p
+{
+    color: #fff;
+}
+.logo 
+{
+    width: 200px;
+}
+.box 
+{
+    border-radius: 25px;
+    padding: 20px;
+    width: 90%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+h1 
+{
+    font-size: large;
+    color: #fff;
+}
+
+
+
+
+.scroll-down
+{
+    height: 50px;
+    width: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    top: 250px;
+
+}
+
+.scroll-down::before,
+.scroll-down::after
+{
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid rgb(255, 255, 255);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::after
+{
+    top: 30;
+    animation-delay: .3s;
+}
+@keyframes scroll-down
+{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 90%;
+    }
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container 
+{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.next 
+{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: -22px;
+  margin-right: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev 
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    left: 20px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;  
+}
+
+.next 
+{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover 
+{
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text 
+{
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext 
+{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.fade 
+{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade 
+{
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px)
+{
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
